@@ -28,8 +28,8 @@ jobs:
 
       - name: Commit and Push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "adn123omar"
+          git config --global user.email "adn123omar@gmail.com"
           git add Database/bangla_words.xlsx Database/addWords.xlsx
           git commit -m "Updated Excel files via GitHub Actions" || echo "No changes to commit"
           git push
