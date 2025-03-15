@@ -186,7 +186,11 @@ const App: React.FC = () => {
                     onClick={() => setShowTranslation(true)}
                     startIcon={<Visibility />}
                     disabled={!currentWord}
-                    style={{ marginTop: "20px" }}
+                    style={{
+                        marginTop: "20px",
+                        color: !currentWord ? "#555555" : undefined, // Change text color when disabled
+                        backgroundColor: !currentWord ? "#8f8f8f" : undefined,
+                    }}
                 >
                     Show Translation
                 </Button>
