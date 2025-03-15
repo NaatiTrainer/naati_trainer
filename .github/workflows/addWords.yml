@@ -27,9 +27,11 @@ jobs:
         run: python workflow_scripts/addWords.py  # Change this to your script's filename
 
       - name: Commit and Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          git config --global user.name "adn123omar"
-          git config --global user.email "adn123omar@gmail.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add Database/bangla_words.xlsx Database/addWords.xlsx
           git commit -m "Updated Excel files via GitHub Actions" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:main
