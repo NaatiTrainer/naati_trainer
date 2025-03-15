@@ -1,46 +1,57 @@
-/* App.css */
-.container {
+/* Container styles for the current word box */
+.current-word-box {
+  padding: 20px;
+  background-color: var(--word-box-bg-color);
+  border-radius: 10px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #f4f4f4;
+  align-items: center;
 }
 
-.paper {
-  padding: 30px;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+/* Heading styles */
+h4 {
+  color: var(--heading-color);
 }
 
-.word-box {
-  margin: 20px 0;
-  padding: 15px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  background: #e3f2fd;
-  border-radius: 8px;
-  display: inline-block;
-  min-width: 200px;
+/* Button styles */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
 }
 
-.translation {
-  font-size: 1.3rem;
-  color: #d32f2f;
-  font-weight: bold;
-  margin-top: 10px;
+button:disabled {
+  cursor: not-allowed;
 }
 
-.button-group {
+/* Additional button styles based on type */
+button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+button.error {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Switch container (for dark mode toggle) */
+.switch-container {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.upload-btn {
-  margin-bottom: 20px;
+.switch-container label {
+  margin-right: 10px;
+  color: var(--heading-color);
 }
