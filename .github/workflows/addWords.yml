@@ -1,6 +1,6 @@
 name: Run Python Script on Push
 
-permisions: write-all
+permissions: write-all
 
 on: 
   push:
